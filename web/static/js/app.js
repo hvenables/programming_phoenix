@@ -19,3 +19,13 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+import Player from "./player.js"
+
+let video = document.getElementById('video')
+
+if(video) {
+  Player.init(video.id, video.getAttribute("data-player"), () => {
+    console.log("player ready");
+  })
+}
